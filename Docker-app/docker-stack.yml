@@ -1,0 +1,9 @@
+services:
+  Docker-app:
+    image: your-dockerhub-username/java-app:latest
+    ports:
+      - "8080:8080"
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
